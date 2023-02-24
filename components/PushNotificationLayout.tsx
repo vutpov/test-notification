@@ -42,7 +42,10 @@ const PushNotificationLayout: React.FC<React.PropsWithChildren<{}>> = ({
 
   // Get the push notification message and triggers a toast to display it
   async function getMessage() {
+    console.log(`message hello`);
     onMessage(messaging, (message) => {
+      console.log(message, `hello`);
+
       toast(
         <div onClick={() => handleClickPushNotification(message?.data?.url)}>
           <h5>{message?.notification?.title}</h5>

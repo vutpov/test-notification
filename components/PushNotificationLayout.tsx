@@ -24,7 +24,7 @@ const PushNotificationLayout: React.FC<React.PropsWithChildren<{}>> = ({
       try {
         const token = await getFcmToken();
         if (token) {
-          console.log("token", token);
+          console.log(token);
           getMessage();
         }
       } catch (error) {
@@ -39,6 +39,10 @@ const PushNotificationLayout: React.FC<React.PropsWithChildren<{}>> = ({
       router.push(url);
     }
   };
+
+  //   useEffect(() => {
+  //     toast(<div>hello</div>);
+  //   }, []);
 
   // Get the push notification message and triggers a toast to display it
   async function getMessage() {

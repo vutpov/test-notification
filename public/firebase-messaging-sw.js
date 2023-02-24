@@ -1,5 +1,9 @@
-importScripts("https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js");
-importScripts("https://www.gstatic.com/firebasejs/7.9.1/firebase-messaging.js");
+importScripts(
+  "https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"
+);
+importScripts(
+  "https://www.gstatic.com/firebasejs/9.6.1/firebase-messaging-compat.js"
+);
 
 firebase.initializeApp({
   apiKey: "AIzaSyBHHCZWxbJRAvyLIesoKAB4eP1m0720gkU",
@@ -9,3 +13,4 @@ firebase.initializeApp({
   messagingSenderId: "701629392288",
   appId: "1:701629392288:web:5c1349bcf52ecdd1f0f0c5",
 });
+const messaging = firebase.messaging();

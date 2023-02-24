@@ -26,13 +26,10 @@ const getFcmToken = async () => {
   return token;
 };
 
-function requestPermission() {
+async function requestPermission() {
   console.log("Requesting permission...");
-  Notification.requestPermission().then((permission) => {
-    if (permission === "granted") {
-      console.log("Notification permission granted.");
-    }
-  });
+  const res = await Notification.requestPermission();
+  return res;
 }
 
 export { app, analytics, messaging, requestPermission, getFcmToken };
